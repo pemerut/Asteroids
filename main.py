@@ -12,7 +12,8 @@ def main():
 
 main()
 
-
+clock = pygame.time.Clock()
+db = 0
 
 loop_bool = True
 
@@ -24,3 +25,6 @@ while loop_bool:
 
     screen.fill("black")
     pygame.display.flip()
+    clock.tick(60)
+    db = clock.tick() / 1000
+    
