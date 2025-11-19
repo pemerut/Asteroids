@@ -16,7 +16,7 @@ main()
 player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
 
 clock = pygame.time.Clock()
-db = 0
+dt = 0
 
 loop_bool = True
 
@@ -28,9 +28,9 @@ while loop_bool:
 
     screen.fill("black")
     player.draw(screen)
+    player.update(dt)
     pygame.display.flip()
-    clock.tick(60)
-    db = clock.tick() / 1000
+    dt = clock.tick(60) / 1000
 
     
     
